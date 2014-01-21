@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uebung: MyString
+  saetze: 1
+  wiederholungen: 1
+  abgeschlossen: false
+
+two:
+  uebung: MyString
+  saetze: 1
+  wiederholungen: 1
+  abgeschlossen: false

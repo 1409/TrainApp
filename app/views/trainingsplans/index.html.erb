@@ -1,0 +1,33 @@
+<h1>Listing trainingsplans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uebung</th>
+      <th>Saetze</th>
+      <th>Wiederholungen</th>
+      <th>Abgeschlossen</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trainingsplans.each do |trainingsplan| %>
+      <tr>
+        <td><%= trainingsplan.uebung %></td>
+        <td><%= trainingsplan.saetze %></td>
+        <td><%= trainingsplan.wiederholungen %></td>
+        <td><%= trainingsplan.abgeschlossen %></td>
+        <td><%= link_to 'Show', trainingsplan %></td>
+        <td><%= link_to 'Edit', edit_trainingsplan_path(trainingsplan) %></td>
+        <td><%= link_to 'Destroy', trainingsplan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trainingsplan', new_trainingsplan_path %>
