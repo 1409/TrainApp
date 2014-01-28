@@ -24,9 +24,10 @@ class TrainingsplansController < ApplicationController
 
     respond_to do |format|
       if @trainingsplan.save
-        format.html { redirect_to trainingsplans_url, notice: 'Eine neue Übung wurde erfolgreich erstellt' }        format.json { render action: 'show', status: :created, location: @trainingsplan }
+        format.html { redirect_to trainingsplans_url, notice: 'Eine neue Übung wurde erfolgreich erstellt' }        
+        format.json { render action: 'Zeigen', status: :created, location: @trainingsplan }
       else
-        format.html { render action: 'new' }
+        format.html { render action: 'Neue Übung' }
         format.json { render json: @trainingsplan.errors, status: :unprocessable_entity }
       end
     end
@@ -37,10 +38,10 @@ class TrainingsplansController < ApplicationController
   def update
     respond_to do |format|
       if @trainingsplan.update(trainingsplan_params)
-        format.html { redirect_to trainingsplan_url, notice: 'Übung wurder erfolgreich upgedatet' }
+        format.html { redirect_to trainingsplans_url, notice: 'Übung wurder erfolgreich upgedatet' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render action: 'bearbeiten' }
         format.json { render json: @trainingsplan.errors, status: :unprocessable_entity }
       end
     end
