@@ -1,0 +1,33 @@
+<table class="table  table-hover">  
+  <thead>
+    <tr>
+      <th></th>
+      <th>Übung</th>
+      <th></th>
+      <th>Sätze</th>
+      <th>Wiederholungen</th>
+      <th>Abgeschlossen</th>
+     
+
+    </tr>
+    <%= link_to 'Neue Übung', new_trainingsplan_path, class: "btn btn-info btn-sm" %>
+
+  </thead>
+  <tbody>
+    <% trainingsplans.each do |trainingsplan| %>
+    <tr>
+      <td>
+        <%= form_for trainingsplan do |f| %>
+        <%= f.check_box :abgeschlossen, class: "checkable" %>
+        <% end %>
+      </td>
+      <td><%= link_to trainingsplan.uebung, edit_trainingsplan_path(trainingsplan) %>
+      <td class="<%= css_class %>"></td>
+      <td><%= trainingsplan.saetze %></td>
+      <td><%= trainingsplan.wiederholungen %></td>
+      <td><%= trainingsplan.abgeschlossen %></td>
+      
+      <% end %>
+  </tbody>
+  
+</table>

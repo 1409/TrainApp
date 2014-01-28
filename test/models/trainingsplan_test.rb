@@ -1,7 +1,4 @@
-require 'test_helper'
-
-class TrainingsplanTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+test "Trainingsplan can not be saved without name" do
+ trainingsplan = Trainingsplan.new
+ assert !trainingsplan.save
 end

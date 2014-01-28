@@ -1,4 +1,5 @@
 TrainApp::Application.routes.draw do
+  devise_for :users
  resources :trainingsplans, except: [:show]
 
 
