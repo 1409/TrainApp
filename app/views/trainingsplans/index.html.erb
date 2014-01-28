@@ -1,9 +1,11 @@
 
 <h1>Trainingsplan</h1>
 <h2>Das muss noch trainiert werden!</h2>
-<%= render partial: "table", locals: {trainingsplans: @todo} %>
+<%= render partial: "table", locals: {trainingsplans: @todo, css_class: "todo"} %>
 <h2>Das hast du schon geschafft!</h2>
-<%= render partial: "table", locals: {trainingsplans: @done} %>
+<%= render partial: "table", locals: {trainingsplans: @done, css_class: "done"} %>
+
+
 
 
 
