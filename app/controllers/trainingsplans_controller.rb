@@ -3,7 +3,8 @@ class TrainingsplansController < ApplicationController
   # GET /trainingsplans
   # GET /trainingsplans.json
   def index
-    @trainingsplans = Trainingsplan.all
+    @done = Tarainingsplan.where(done: true)
+    @todo = Trainingsplan.where(done: false)
   end
 
 
