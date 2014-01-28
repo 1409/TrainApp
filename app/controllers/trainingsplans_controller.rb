@@ -5,6 +5,8 @@ class TrainingsplansController < ApplicationController
   def index
     @done = Trainingsplan.where(abgeschlossen: true)
     @todo = Trainingsplan.where(abgeschlossen: false)
+    @done = Trainingsplan.where(done: true).order(created_at: :desc)
+    @todo = Trainingsplan.where(done: false).order(updated_at: :desc)
   end
 
 
