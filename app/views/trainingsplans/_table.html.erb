@@ -1,6 +1,7 @@
 <table class="table  table-hover">  
   <thead>
     <tr>
+     
       <th></th>
       <th>Übung</th>
       <th></th>
@@ -22,6 +23,7 @@
         <% end %>
       </td>
       <td><%= link_to trainingsplan.uebung, edit_trainingsplan_path(trainingsplan) %>
+
       <td class="<%= css_class %>"></td>
       <td><%= trainingsplan.saetze %></td>
       <td><%= trainingsplan.wiederholungen %></td>
