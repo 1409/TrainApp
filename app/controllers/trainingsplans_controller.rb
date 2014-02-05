@@ -1,5 +1,5 @@
 class TrainingsplansController < ApplicationController
-  before_action :set_trainingsplan, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
   # GET /trainingsplans
   # GET /trainingsplans.json
   def index
@@ -23,7 +23,7 @@ class TrainingsplansController < ApplicationController
   # POST /trainingsplans
   # POST /trainingsplans.json
   def create
-    @trainingsplan = Trainingsplan.new(trainingsplan_params)
+    @trainingsplans = current_user.trainingsplans.new(trainingsplans_params)
 
     respond_to do |format|
       if @trainingsplan.save
