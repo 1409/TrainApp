@@ -1,12 +1,55 @@
-
+<br>
+<br>
 <h1>Trainingsplan</h1>
 <h2>Das muss noch trainiert werden!</h2>
 <%= render partial: "table", locals: {trainingsplans: @todo, css_class: "todo"} %>
 <h2>Das hast du schon geschafft!</h2>
 <%= render partial: "table", locals: {trainingsplans: @done, css_class: "done"} %>
 
+<style>
+  /* http://css-tricks.com/perfect-full-page-background-image/ */
+  html {
+    background: url(http://rack.0.mshcdn.com/media/ZgkyMDEzLzA2LzE3LzQ2L2ZpdG5lc3NuYWlsLmQwMGJmLmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/0407ed24/fbf/fitness-nail.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  body {
+    padding-top: 20px;
+    font-size: 16px;
+    font-family: "Open Sans",serif;
+    background: transparent;
+  }
+  h1 {
+    font-family: "Abel", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+  }
+  /* Override B3 .panel adding a subtly transparent background */
+  .panel {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .margin-base-vertical {
+    margin: 40px 0;
+  }
+  </style>
 
 
-
-
+<br>
+<br>
+<p>Richtig Bankdrücken<p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/Oj-TYtwWXuI" frameborder="0" allowfullscreen></iframe>
+<br>
+<br>
+<p>Brustmuskeltraining am Seilzug<p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/-kxK7ZWmKqc" frameborder="0" allowfullscreen></iframe>
+<br>
+<br>
+<p>Rückentraining<p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/BfmG0pF5UQA" frameborder="0" allowfullscreen></iframe>
+<br>
+<br>
+<p>Bizeps und Trizeps<p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/THDLm-2QA1I" frameborder="0" allowfullscreen></iframe>
 
