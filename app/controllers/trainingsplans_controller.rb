@@ -23,7 +23,7 @@ class TrainingsplansController < ApplicationController
   # POST /trainingsplans
   # POST /trainingsplans.json
   def create
-    @trainingsplans = current_user.trainingsplans.new(trainingsplans_params)
+    @trainingsplan = current_user.trainingsplans.new(trainingsplan_params)
 
     respond_to do |format|
       if @trainingsplan.save
