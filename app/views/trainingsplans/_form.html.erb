@@ -1,3 +1,4 @@
+<!-- das ist unser iframe für die Youtube Playlist -->
 <%= form_for @trainingsplan, :html => { :role => "form"} do |f| %>
 </div>   
 <% if @trainingsplan.errors.any? %>
@@ -14,6 +15,7 @@
   </div>
 </div>
 <% end %>
+<!-- Elemente der Tabelle werden hier erzeugt wie z.B. Checkbox, Übungsname, Sätze, Wiederholungen und der Button "Übung sichern" -->
 <div class="checkbox">
   <label>
     <%= f.check_box :abgeschlossen %> <%= f.label :abgeschlossen %>
@@ -31,7 +33,6 @@
   <%= f.label :wiederholungen %><br>
   <%= f.text_field :wiederholungen, class: "form-control", placeholder: "Wiederholungen" %>
 </div>
-
 <div class="actions">
   <%= f.submit "Übung speichern", class: "btn btn-primary" %>  <%= link_to 'Cancel', trainingsplans_path, class: "btn btn-default" %>
 </div>  
