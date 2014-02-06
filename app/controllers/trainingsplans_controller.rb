@@ -4,10 +4,12 @@ class TrainingsplansController < ApplicationController
   # GET /trainingsplans
   # GET /trainingsplans.json
   def index
-    @done = Trainingsplan.where(abgeschlossen: true)
-    @todo = Trainingsplan.where(abgeschlossen: false)
-    @done = Trainingsplan.where(abgeschlossen: true).order(created_at: :desc)
-    @todo = Trainingsplan.where(abgeschlossen: false).order(updated_at: :desc)
+    if current_user
+      @done = Trainingsplan.where(abgeschlossen: true, user_id: current_user.id)
+      @todo = Trainingsplan.where(abgeschlossen: false, user_id: current_user.id)
+      @done = Trainingsplan.where(abgeschlossen: true, user_id: current_user.id).order(created_at: :desc)
+      @todo = Trainingsplan.where(abgeschlossen: false, user_id: current_user.id).order(updated_at: :desc)
+    end
   end
 
   # GET /trainingsplans/new
@@ -23,6 +25,7 @@ class TrainingsplansController < ApplicationController
   # POST /trainingsplans.json
   def create
     @trainingsplan = current_user.trainingsplans.new(trainingsplan_params)
+    @trainingsplan.user_id = current_user.id
 
     respond_to do |format|
       if @trainingsplan.save
@@ -40,7 +43,7 @@ class TrainingsplansController < ApplicationController
   def update
     respond_to do |format|
       if @trainingsplan.update(trainingsplan_params)
-        format.html { redirect_to trainingsplans_url, notice: 'Übung wurder erfolgreich upgedatet' }
+        format.html { redirect_to trainingsplans_url, notice: 'Übung wurde erfolgreich upgedatet' }
         format.json { head :no_content }
       else
         format.html { render action: 'bearbeiten' }
