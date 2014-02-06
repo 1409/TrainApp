@@ -1,22 +1,23 @@
 <h2>Sign up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
+<div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
   <div><%= f.label :username %><br />
-	<%= f.text_field :username %></div>
+   <%= f.text_field :username %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+   <div><%= f.label :password %><br />
+    <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+      <div><%= f.submit "Sign up" %></div>
+      <% end %>
 
+<<<<<<< HEAD
 <%= render "devise/shared/links" %>
 
 <style>
@@ -48,3 +49,6 @@
     margin: 40px 0;
   }
   </style>
+=======
+      <%= render "devise/shared/links" %>
+>>>>>>> 5ecccbfc316f42dcbf70889ed44f116f9eaa5b2f
