@@ -1,5 +1,6 @@
 class TrainingsplansController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+  before_action :set_trainingsplan, only: [:edit, :update, :destroy]
   # GET /trainingsplans
   # GET /trainingsplans.json
   def index
@@ -42,7 +43,7 @@ class TrainingsplansController < ApplicationController
         format.html { redirect_to trainingsplans_url, notice: 'Übung wurder erfolgreich upgedatet' }
         format.json { head :no_content }
       else
-        format.html { render action: 'bearbeiten' }
+        format.html { render action: 'edit' }
         format.json { render json: @trainingsplan.errors, status: :unprocessable_entity }
       end
     end
@@ -61,7 +62,7 @@ class TrainingsplansController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trainingsplan
-      @trainingsplans = trainingsplans.find(params[:id])
+      @trainingsplan = Trainingsplan.find(params[:id])
       if @trainingsplan.user_id != current_user.id
         redirect_to trainingsplans_url, alert: 'You can edit only your own Tasks.'
       end

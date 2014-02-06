@@ -5,6 +5,7 @@
       <th></th>
       <th>Übung</th>
       <th></th>
+      <th></th>
       <th>Sätze</th>
       <th>Wiederholungen</th>
       <th>Abgeschlossen</th>
@@ -23,11 +24,14 @@
         <% end %>
       </td>
       <td><%= link_to trainingsplan.uebung, edit_trainingsplan_path(trainingsplan) %>
+        <td><%= link_to 'Destroy', trainingsplan, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %>
 
       <td class="<%= css_class %>"></td>
       <td><%= trainingsplan.saetze %></td>
       <td><%= trainingsplan.wiederholungen %></td>
       <td><%= trainingsplan.abgeschlossen %></td>
+
+
       
       <% end %>
   </tbody>
