@@ -11,31 +11,31 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-          <li class="<%= "active" if params[:controller] == "trainingsplans" %>">
-            <%= link_to "Trainingsplan", trainingsplans_path %>
-          </li>
-          <li class="<%= "active" if params[:controller] == "projects" %>">
-            <%= link_to "Info", projects_path %>
-          </li>
+              <li class="<%= "active" if params[:controller] == "trainingsplans" %>">
+                <%= link_to "Trainingsplan", trainingsplans_path %>
+            </li>
+            <li class="<%= "active" if params[:controller] == "projects" %>">
+                <%= link_to "Info", projects_path %>
+            </li>
         </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <% if user_signed_in? %>
-                <li>
-                    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
-                </li>
-                <li>
-                    <%= link_to "Logged in as " + current_user.email, edit_user_registration_path %> 
-                </li>
-                <% else %>
-                <li>
-                    <%= link_to 'Login', new_user_session_path %>
-                </li>
-                <li>
-                    <%= link_to 'Sign up', new_user_registration_path %>
-                </li>
-                <% end %>
-            </ul>
-        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+            <li>
+                <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
+            </li>
+            <li>
+                <%= link_to "Logged in as " + current_user.email, edit_user_registration_path %> 
+            </li>
+            <% else %>
+            <li>
+                <%= link_to 'Login', new_user_session_path %>
+            </li>
+            <li>
+                <%= link_to 'Sign up', new_user_registration_path %>
+            </li>
+            <% end %>
+        </ul>
     </div>
+</div>
 </div>

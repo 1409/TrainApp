@@ -9,11 +9,11 @@
       <th>Sätze</th>
       <th>Wiederholungen</th>
       <th>Abgeschlossen</th>
-     
+      
 
     </tr>
     <%= link_to 'Neue Übung', new_trainingsplan_path, class: "btn btn-info btn-sm" %>
-        
+    
 
   </thead>
   <tbody>
@@ -27,14 +27,14 @@
       <td><%= link_to trainingsplan.uebung, edit_trainingsplan_path(trainingsplan) %>
         <td><%= link_to 'Destroy', trainingsplan, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %>
 
-      <td class="<%= css_class %>"></td>
-      <td><%= trainingsplan.saetze %></td>
-      <td><%= trainingsplan.wiederholungen %></td>
-      <td><%= trainingsplan.abgeschlossen %></td>
+          <td class="<%= css_class %>"></td>
+          <td><%= trainingsplan.saetze %></td>
+          <td><%= trainingsplan.wiederholungen %></td>
+          <td><%= trainingsplan.abgeschlossen %></td>
 
 
-      
-      <% end %>
-  </tbody>
-  
-</table>
+          
+          <% end %>
+        </tbody>
+        
+      </table>

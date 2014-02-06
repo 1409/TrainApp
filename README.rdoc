@@ -1,28 +1,11 @@
-== README
+Projektname: TrainApp die Trainingsapp für jedermann.
+Porojekt Owner: Onur Kavasoglu MatNr. 325442
+								Oliver Landyszkowski Mat.Nr 359670
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projektbeschreibung: 
+Diese kleine Anwendung soll dabei helfen, etwas mehr Sport zu machen. Sie geht an die Menschen die entweder keine Zeit zum trainieren haben oder einfach nicht das nötige Geld zu Verfügung steht um ein teures Fitnessstudio zu bezahlen.
+Es sind einfache Übungen die man auch zu Hause oder Unterwegs machen kann.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Projektbeschreibung(technisch)
+Wir haben einige Programmiersprachen benutzt:
+Für das Design benutzen wir CSS mit Bootstrap, des weiteren benutzen wir für den Source Code Ruby on Rails mit der Sublime Text 2 Applikation.
