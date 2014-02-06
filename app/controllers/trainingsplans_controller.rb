@@ -9,8 +9,6 @@ class TrainingsplansController < ApplicationController
     @todo = Trainingsplan.where(abgeschlossen: false).order(updated_at: :desc)
   end
 
-
-
   # GET /trainingsplans/new
   def new
     @trainingsplan = Trainingsplan.new
