@@ -1,38 +1,38 @@
 <%= form_for @trainingsplan, :html => { :role => "form"} do |f| %>
-  </div>   
-  <% if @trainingsplan.errors.any? %>
-    <div class="panel panel-danger">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@trainingsplan.errors.count, "error") %> prohibited this trainingsplan from being saved:</h3>
-      </div>
-      <div class="panel-body">
-        <ul>
-          <% @trainingsplan.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  <% end %>
-    <div class="checkbox">
-    <label>
-      <%= f.check_box :abgeschlossen %> <%= f.label :abgeschlossen %>
-    </label>
+</div>   
+<% if @trainingsplan.errors.any? %>
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= pluralize(@trainingsplan.errors.count, "error") %> prohibited this trainingsplan from being saved:</h3>
   </div>
-  <div class="form-group">
-    <%= f.label :uebung %><br>
-    <%= f.text_field :uebung, class: "form-control", placeholder: "Bezeichnung der Übung" %>
+  <div class="panel-body">
+    <ul>
+      <% @trainingsplan.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
   </div>
-  <div class="form-group">
-    <%= f.label :saetze %><br>
-    <%= f.date_field :saetze, class: "form-control", placeholder: "Satzanzahl" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :wiederholungen %><br>
-    <%= f.text_field :wiederholungen, class: "form-control", placeholder: "Wiederholungen" %>
-  </div>
+</div>
+<% end %>
+<div class="checkbox">
+  <label>
+    <%= f.check_box :abgeschlossen %> <%= f.label :abgeschlossen %>
+  </label>
+</div>
+<div class="form-group">
+  <%= f.label :uebung %><br>
+  <%= f.text_field :uebung, class: "form-control", placeholder: "Bezeichnung der Übung" %>
+</div>
+<div class="form-group">
+  <%= f.label :saetze %><br>
+  <%= f.date_field :saetze, class: "form-control", placeholder: "Satzanzahl" %>
+</div>
+<div class="form-group">
+  <%= f.label :wiederholungen %><br>
+  <%= f.text_field :wiederholungen, class: "form-control", placeholder: "Wiederholungen" %>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Übung speichern", class: "btn btn-primary" %>  <%= link_to 'Cancel', trainingsplans_path, class: "btn btn-default" %>
-  </div>  
-    <% end %>
+<div class="actions">
+  <%= f.submit "Übung speichern", class: "btn btn-primary" %>  <%= link_to 'Cancel', trainingsplans_path, class: "btn btn-default" %>
+</div>  
+<% end %>
