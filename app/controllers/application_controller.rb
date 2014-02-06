@@ -1,3 +1,4 @@
+#Lässt uns mit einem Username anmelden 
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   before_filter :configure_permitted_parameters, if: :devise_controller?
