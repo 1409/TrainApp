@@ -18,3 +18,7 @@
 .done {
   text-decoration:line-through;
 }
+
+#content-container {
+	padding-top: 60px;
+}

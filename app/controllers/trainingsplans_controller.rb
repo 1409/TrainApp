@@ -43,7 +43,7 @@ class TrainingsplansController < ApplicationController
         format.html { redirect_to trainingsplans_url, notice: 'Übung wurder erfolgreich upgedatet' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render action: 'bearbeiten' }
         format.json { render json: @trainingsplan.errors, status: :unprocessable_entity }
       end
     end
