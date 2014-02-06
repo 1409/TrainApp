@@ -1,5 +1,5 @@
+<!-- das gibt uns den Hintergrund der URL wieder -->
 <style>
-                  /* das gibt uns den Hintergrund der URL wieder*/
 html {
   background: url(http://www.iarphotography.com/photos/2012/06/422MM.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -25,14 +25,12 @@ h1 {
   margin: 40px 0;
 }
 </style>
-
 <br>
 <br>
 <br>
+<!-- hier wird die Tabelle erzeugt-->
 <h2 style="color:#D8D8D8;">Trainingsplan</h2>
-
 <div class="well well-lg">
-
   <% if current_user %>
     <h2>Das muss noch trainiert werden!</h2>
     <%= render partial: "table", locals: {trainingsplans: @todo, css_class: "todo"} %>
@@ -42,9 +40,6 @@ h1 {
     <h2>Du solltest dich ersteinmal Anmelden</h2>
   <% end %>
 </div>
-
-
-
 <br>
 <br>
 <!-- das ist unser iframe für die Youtube Playlist -->
